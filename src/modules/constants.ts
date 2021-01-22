@@ -1,0 +1,4 @@
+export const LOGINFETCH = 'LOGINFETCH';
+export const LOGINSUCCESS = 'LOGINSUCCESS';
+export const LOGINERROR = 'LOGINERROR';
+export const LOGINRELOAD = 'LOGINRELOAD';
