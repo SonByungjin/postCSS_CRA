@@ -51,7 +51,7 @@ const mapStateToProps : MapStateToProps<ReduxProps,{},RootState>
         loading : selectLoading(state),
         status : selectStatus(state),
         msg : selectMsg(state),
-    })
+    });
 
 const mapDispatchToProps : MapDispatchToPropsFunction<DispatchProps, {}>
     = dispatch => ({
@@ -59,7 +59,7 @@ const mapDispatchToProps : MapDispatchToPropsFunction<DispatchProps, {}>
         dispatch(loginFetch({email, password})),
         loginReload: () =>
         dispatch(loginReload()),
-    })
+    });
 
 const SigInScreen = connect(mapStateToProps, mapDispatchToProps)(Signin);
 

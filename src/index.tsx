@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {store, sagaMiddleware} from './store';
-import {rootSaga} from './modules/saga';
+// import {rootSaga} from './modules/saga';
+import {rootSaga} from './modules';
 import './index.css';
 import App from './App';
 
