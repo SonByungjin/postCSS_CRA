@@ -4,17 +4,18 @@ import {Login} from '../components/login/Login';
 import {LoginResult} from '../components/loginResult/LoginResult';
 import {loginFetch, loginReload} from '../modules/action';
 import {RootState} from '../modules/reducer';
+import {selectLoading, selectStatus, selectMsg} from '../modules/selector';
 
 interface ReduxProps{
     loading : boolean;
     status : boolean;
     msg : string;
-}
+};
 
 interface DispatchProps {
     loginFetch : typeof loginFetch;
     loginReload : typeof loginReload;
-}
+};
 
 type Props = ReduxProps & DispatchProps;
 
@@ -42,14 +43,14 @@ class Signin extends Component<Props> {
                 </div>
             </div>
         );
-    }
-}
+    };
+};
 
 const mapStateToProps : MapStateToProps<ReduxProps,{},RootState>
     = (state: RootState) : ReduxProps => ({
-        loading : state.signInReducer.loading,
-        status : state.signInReducer.status,
-        msg : state.signInReducer.msg,
+        loading : selectLoading(state),
+        status : selectStatus(state),
+        msg : selectMsg(state),
     })
 
 const mapDispatchToProps : MapDispatchToPropsFunction<DispatchProps, {}>

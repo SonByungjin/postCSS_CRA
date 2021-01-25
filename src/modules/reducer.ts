@@ -2,11 +2,13 @@ import {combineReducers} from 'redux';
 import {LOGINFETCH, LOGINSUCCESS, LOGINERROR, LOGINRELOAD} from './constants';
 import {LOGINACTIONS} from './action';
 
-const initialState : {
-    loading : boolean,
-    status: boolean,
-    msg : string,
-} = {
+export interface AuthState {
+    loading : boolean;
+    status: boolean;
+    msg : string;
+};
+
+const initialState : AuthState = {
     loading: true,
     status: false,
     msg: '',
@@ -22,7 +24,7 @@ function loginReducer (state=initialState, action:LOGINACTIONS){
                 loading: false,
                 status : true,
                 msg : action.payload,
-            } ;
+            };
         case LOGINERROR :
             return {
                 ...state,
