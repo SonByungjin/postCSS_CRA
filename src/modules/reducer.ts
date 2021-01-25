@@ -21,14 +21,14 @@ function loginReducer (state=initialState, action:LOGINACTIONS){
                 ...state,
                 loading: false,
                 status : true,
-                msg : action.msg,
+                msg : action.payload,
             } ;
         case LOGINERROR :
             return {
                 ...state,
                 loading: false,
                 status : false,
-                msg : action.msg,
+                msg : action.payload,
             };
         case LOGINRELOAD :
             return {

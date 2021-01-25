@@ -54,8 +54,8 @@ const mapStateToProps : MapStateToProps<ReduxProps,{},RootState>
 
 const mapDispatchToProps : MapDispatchToPropsFunction<DispatchProps, {}>
     = dispatch => ({
-        loginFetch : (email, password) =>
-        dispatch(loginFetch(email, password)),
+        loginFetch : ({email, password}) =>
+        dispatch(loginFetch({email, password})),
         loginReload: () =>
         dispatch(loginReload()),
     })

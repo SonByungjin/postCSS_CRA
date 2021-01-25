@@ -46,7 +46,7 @@ export class Login extends Component<OwnProps,OwnState> {
                     }}
                     onKeyUp={(e)=>{
                         if(e.key === 'Enter'){
-                            loginFetch(email, password);
+                            loginFetch({email, password});
                             // this.handleLoginFetch();
                         }
                     }}
@@ -66,7 +66,7 @@ export class Login extends Component<OwnProps,OwnState> {
                     }}
                     onKeyUp={(e)=>{
                         if(e.key === 'Enter'){
-                            loginFetch(email, password);
+                            loginFetch({email, password});
                             // this.handleLoginFetch();
                         }
                     }}
@@ -75,7 +75,7 @@ export class Login extends Component<OwnProps,OwnState> {
                 <div className='cr-login-box'>
                     <button
                     onClick={()=>{
-                        loginFetch(email, password);
+                        loginFetch({email, password});
                         // this.handleLoginFetch();
                     }}
                     className='cr-login-box_btn'

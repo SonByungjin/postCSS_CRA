@@ -2,18 +2,24 @@ import {LOGINFETCH, LOGINSUCCESS, LOGINERROR, LOGINRELOAD} from './constants';
 
 export interface LoginFetch {
     type: typeof LOGINFETCH;
-    email : string;
-    password : string;
+    // email : string;
+    // password : string;
+    payload : {
+        email : string,
+        password : string,
+    }
 };
 
 export interface LoginSuccess {
     type: typeof LOGINSUCCESS;
-    msg: string;
+    // msg: string;
+    payload : string;
 };
 
 export interface LoginError {
     type: typeof LOGINERROR;
-    msg : string;
+    // msg : string;
+    payload : string;
 };
 
 export interface LoginReload {
@@ -23,20 +29,21 @@ export interface LoginReload {
 export type LOGINACTIONS =
  LoginFetch | LoginSuccess | LoginError | LoginReload;
 
- export const loginFetch = (email:string, password:string) : LoginFetch => ({
+ export const loginFetch = (payload : LoginFetch['payload']) : LoginFetch => ({
      type: LOGINFETCH,
-     email : email,
-     password: password,
+    //  email : email,
+    //  password: password,
+    payload
  });
 
- export const loginSuccess = (msg : string) : LoginSuccess =>({
+ export const loginSuccess = (payload : LoginSuccess['payload']) : LoginSuccess =>({
      type: LOGINSUCCESS,
-     msg : msg,
+     payload,
  });
 
- export const loginError = (msg : string) : LoginError => ({
+ export const loginError = (payload : LoginError['payload']) : LoginError => ({
      type: LOGINERROR,
-     msg : msg,
+     payload,
 });
 
 export const loginReload = () : LoginReload => ({
