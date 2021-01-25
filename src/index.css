@@ -29,25 +29,53 @@
                 color: blue;
                 text-decoration: underline;
             }
+.pg-header{
+    width: 100vw;
+    height: 70px;
+    background-color: #01427a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pg-header_wrap{
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: skyblue;
+    }
+.pg-header_wrap-box_menu{
+                color: #fff;
+                margin-left: 10px;
+            }
+.pg-header_wrap-box_auth{
+                color: #fff;
+                margin-left: 10px;
+            }
 .pg-signin {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: var(--base-background);
 }
-/* align-items: center; */
 .pg-signin_box{
         width: 80%;
         height: 100%;
-        background-color: #FAF0E6;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: var(--base-content);
     }
-.App{
-  text-align: center;
+:root{
+    --base-background : #dbdbdb;
+    --base-content : #fafafa;
 }
-.App-logo{
-    font-size: 250px;
-    color: red;
-  }
+body {
+  margin: 0;
+  padding: 0;
+}
+*{
+  box-sizing: border-box;
+}

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect, MapStateToProps, MapDispatchToPropsFunction} from 'react-redux';
 import {Login} from '../components/login/Login';
 import {LoginResult} from '../components/loginResult/LoginResult';
+import {NavBar} from '../components/navBar/NavBar';
 import {loginFetch, loginReload} from '../modules/action';
 import {RootState} from '../modules/reducer';
 import {selectLoading, selectStatus, selectMsg} from '../modules/selector';
@@ -29,6 +30,8 @@ class Signin extends Component<Props> {
             msg
         } = this.props;
         return (
+            <>
+            <NavBar />
             <div className='pg-signin'>
                 <div className='pg-signin_box'>
                     {loading?
@@ -42,6 +45,7 @@ class Signin extends Component<Props> {
                     }
                 </div>
             </div>
+            </>
         );
     };
 };
