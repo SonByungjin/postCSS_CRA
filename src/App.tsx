@@ -1,10 +1,10 @@
 import React from 'react';
-import {SigInScreen} from './containers/Signin';
+import {Layout} from './containers'
 
 function App() {
   return (
     <>
-      <SigInScreen />
+      <Layout />
     </>
   );
 }

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {connect, MapStateToProps, MapDispatchToPropsFunction} from 'react-redux';
-import {Login} from '../components/login/Login';
-import {LoginResult} from '../components/loginResult/LoginResult';
-import {NavBar} from '../components/navBar/NavBar';
-import {Footer} from '../components/footer/Footer';
-import {loginFetch, loginReload} from '../modules/action';
-import {RootState} from '../modules/reducer';
-import {selectLoading, selectStatus, selectMsg} from '../modules/selector';
+import {Login} from '../../components/login/Login';
+import {LoginResult} from '../../components/loginResult/LoginResult';
+import {NavBar} from '../../components/navBar/NavBar';
+import {Footer} from '../../components/footer/Footer';
+import {loginFetch, loginReload} from '../../modules/action';
+import {RootState} from '../../modules/reducer';
+import {selectLoading, selectStatus, selectMsg} from '../../modules/selector';
 
 interface ReduxProps{
     loading : boolean;
