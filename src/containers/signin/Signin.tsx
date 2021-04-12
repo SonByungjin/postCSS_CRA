@@ -43,6 +43,7 @@ class Signin extends Component<Props> {
               />
             )}
             <h1>git</h1>
+            <h2>stash practice</h2>
           </div>
         </div>
         <Footer />
